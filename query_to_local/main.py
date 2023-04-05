@@ -77,8 +77,8 @@ class UberFaresQuery:
 
 
 """
-query = UberFaresQuery('tracker_db', 4, 2023, 'date')
-
-print(query.query_by_sortkey('23-04-02'))
+if __name__ == '__main__':
+    query = UberFaresQuery('tracker_db', 4, 2023, 'date')
+    print(query.query_by_sortkey('23-04-02'))
 """
 
