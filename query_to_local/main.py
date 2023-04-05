@@ -37,7 +37,7 @@ class UberFaresQuery:
         return response
     
     def list_of_days_in_month(self):
-        date = datetime.datetime(2020, self.month, 28)
+        date = datetime.datetime(self.year, self.month, 28)
         next_month = date + datetime.timedelta(days=4)
         last_day_of_month = (next_month - datetime.timedelta(next_month.day)).day
         if self.month == 2:
@@ -55,14 +55,14 @@ class UberFaresQuery:
     
     def tocvs_fares_in_month(self):
         dates = self.format_all_days_in_month()
+        data = self.query_by_sortkey(date)
         for date in dates: 
             csvfile = f'data/{date}.csv'
-            result = self.query_by_sortkey(date)
-            if result['Count'] > 700:
+            if data['Count'] > 700:
                 with open(csvfile, 'a') as csvf:
                     writer = csv.writer(csvf)
                     writer.writerow(['Hour', 'Price'])
-                    for n in result['Items']:
+                    for n in data['Items']:
                         time = n['time']
                         price = (n['price'].replace(',' , ''))
                         price = price[:-3]  
