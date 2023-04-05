@@ -1,5 +1,5 @@
 # Uber-Tracker
-Project to track Uber's fare to my gf's house. Since I live in a country with high inflation, it's hard to know when a fare is high because of Uber's dynamic fare (supply and demand) or just because it increased as everything in the economy. 
+Project to track Uber's fare to my gf's house. Since I live in a country with high inflation, it's hard to know when a fare is high because of Uber's dynamic pricing (supply and demand) or just because it increased as everything in the economy. 
 
 Coded with Python. Using requests, FastAPI, AWS (Lambda, DynamoDB, API Gateway) and a microservice approach. 
 

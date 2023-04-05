@@ -1,11 +1,10 @@
 # Uber-Tracker
 
-api:
 
-    - FastAPI API with two read-only functions. One queries all the fares in a day, the other a fare from a certain hour.
-    - 404 if fare not found.
-    - Connects to DynamoDB with Boto3. 
-    - Setup with API Gateway lambda trigger and lambda_proxy integration as method and resource. 
+- FastAPI API with two read-only functions. One queries all the fares in a day, the other a fare from a certain hour.
+- 404 if fare not found.
+- Connects to DynamoDB with Boto3. 
+- Setup with API Gateway lambda trigger and lambda_proxy integration as method and resource. 
 
 
 Get all fares from month:
